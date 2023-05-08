@@ -4,6 +4,23 @@
     box-sizing: border-box;
     font-family: "poppins",sans-serif;
 }
+.soyh1{
+color: #381b12;
+font-size: 35px;
+font-family: Arial;
+}
+.soyh2{
+    color: #381b12;
+    font-size: 35px;
+font-family: arial;
+}
+.soyh3{
+    color: #381b12;
+    font-size: 24px;
+font-family: arial;
+}
+
+
 body{
     
     background-color: #E1B092;
@@ -52,6 +69,7 @@ body{
     align-items: center;
     left: 50%;
 }
+
 .outside{
     
     -webkit-transform-style: preserve-3d;
