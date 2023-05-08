@@ -1,0 +1,171 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "poppins",sans-serif;
+}
+body{
+    
+    background-color: #E1B092;
+    
+}
+.card{
+
+    width: 640px;
+    height: 400px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+}
+.card:hover{
+    transform: rotate(-5deg);
+}
+.card:hover .outside{
+    transform: rotateY(-130deg);
+    z-index: 1;
+}
+.outside, .inside{
+    
+    height: 100%;
+    width: 50%;
+    position: absolute;
+
+    left: 50.1%;
+}
+.inside{
+
+    background: linear-gradient(
+        to right,
+        #e0e0e0, #ffffff 30%
+    );
+    line-height: 3px;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    left: 50%;
+}
+.outside{
+    
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    z-index: 1;
+    transform-origin: left;
+    transition: 2s;
+    
+     line-height: 3px;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    left: 50%;
+    
+
+}
+.front, 
+.back{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+    background-color: #ffffff;
+
+}
+.front{
+    
+    background-image: url("https://definicion.de/wp-content/uploads/2011/03/patron.png");
+
+}
+.back{
+    transform: rotateY(180deg);
+    background: linear-gradient(to left,#e0e0e0,#ffffff 30%);   
+}
+.cake{
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+}
+
+.cup-top{
+    position: relative;
+    width: 140px;
+   
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-bottom: 40px solid #3a3a3a;
+    bottom: -42px;
+    cursor: pointer;
+    transform-origin: left bottom;
+    
+    
+    
+    
+}
+.cup-top:hover{
+    transform: rotate(-20deg);
+    transition: 1s;
+}
+
+.cup-top{
+    transform: rotate(0deg);
+    transition: 1s;
+
+}
+
+.cup-top::after{
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: -35px;
+    width: 180px;
+    height: 15px;
+    background-color: #000;
+    border-radius: 5px;
+}
+.cup-body{
+    position: relative;
+    width: 140px;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-top: 200px solid #a7bcb9;
+    
+    border-radius: 5px;
+    
+}
+.cup-body::after{
+    content: "";
+    position: absolute;
+    bottom: 87px;
+    left: -17px;
+    width: 129px;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-top: 70px solid #d9b650;
+    
+    
+    
+}
+.outside p {
+    font-size: 43px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    text-align: center;
+    
+    letter-spacing: 6px;
+    color: #000046;
+}
+.inside h1{
+    font-size: 120;
+    line-height: 120;
+}
